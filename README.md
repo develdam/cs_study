@@ -1,16 +1,11 @@
 # cs_study
 
-Computer Science, Data Science, Artificial Intelligence에 대해 공부한 자료를 정리한 공간이다.
+Computer Science, Data Science, Artificial Intelligence에 대해 이해하기 쉽게 정리한 공간이다.
 
 ---
 
 # 1. Computer Science(컴퓨터 과학/공학)
 컴퓨터 과학/공학은 정보와 계산의 이론적 기초를 바탕으로 하드웨어와 소프트웨어의 동작 원리, 설계, 그리고 이를 각 분야에 응용하는 방법을 연구하는 학문이다.
-
-## 컴퓨터 과학/공학의 분야
-1. 컴퓨터 아키텍처
-2. 임베디드 시스템
-3. 컴퓨터 네트워크
 
 ---
 
