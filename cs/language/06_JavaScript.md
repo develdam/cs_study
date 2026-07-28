@@ -13,7 +13,7 @@ JavaScript는 위키피디아의 정의에 따르면 HTML, CSS와 함께 월드 
 - Vue.js(Node.js)
 - Angular
 2. 웹 백엔드
-- Node.js(Chrome V8 JavaScript Engine): 웹브라우저 밖에서도 자바스크립트를 실행/사용할 수 있게 해주는 실행 환경(런타임)이다. Node.js의 등장으로 자바스크립트 언어 하나만으로 웹 풀스택을 개발할 수 있게 되었다.
+- **Node.js(Chrome V8 JavaScript Engine): 웹브라우저 밖에서도 자바스크립트를 실행/사용할 수 있게 해주는 실행 환경(런타임)이다. Node.js의 등장으로 자바스크립트 언어 하나만으로 웹 풀스택을 개발할 수 있게 되었다.**
 - Express(Node.js)
 - NestJS(Node.js)
 3. 웹 풀스택(프론트엔드 + 백엔드)
