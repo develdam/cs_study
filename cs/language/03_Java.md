@@ -20,18 +20,17 @@
 - **컴파일러 체크용(실수 방지): @Override**
 - 코드 자동 생성용(ex. Lombok 라이브러리): @Getter, @Setter 등을 붙이면 컴파일 후 바이트코드(.class 파일)에 메소드가 자동으로 생긴다.
 - **프레임워크에 지시용(Spring Framework): 객체 생성(@RestController), URL 매핑(@GetMapping), 예외 처리 등을 프레임워크가 대신 하도록 메타데이터를 전달한다.**
-
 2. 접근 제어자
 - private
 - default
 - protected
 - public
-
 3. default / static
 
 ---
 
 자바의 주요 라이브러리 및 프레임워크
+
 1. Spring / Spring Boot
 2. Lombok
 3. JPA
