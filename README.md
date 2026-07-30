@@ -33,6 +33,7 @@ Computer Science, Data Science, Artificial Intelligence에 대해 이해하기 �
 ---
 
 # 3. Artificial Intelligence(인공지능)
+인공지능은 위키피디아의 정의에 따르면 인간의 학습능력, 추론능력, 지각능력을 인공적으로 구현하려는 컴퓨터 과학의 세부 분야 중 하나이다.
 
 ---
 
