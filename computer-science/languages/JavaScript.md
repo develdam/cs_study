@@ -10,8 +10,8 @@ JavaScript는 위키피디아의 정의에 따르면 HTML, CSS와 함께 월드 
 
 1. 웹 프론트엔드
 - React(Node.js): Meta가 만든 UI 라이브러리로 프론트엔드 생태계에서 가장 압도적인 점유율을 차지한다.
-- Vue.js(Node.js)
-- Angular
+- Vue.js(Node.js): Evan You가 개발한 UI 구축용 Progressive 자바스크립트 프레임워크이다.
+- Angular: Google에서 개발 및 유지 관리하는 오픈소스 TypeScript 기반 웹 애플리케이션 프레임워크이다.
 2. 웹 백엔드
 - **Node.js(Chrome V8 JavaScript Engine): 웹브라우저 밖에서도 자바스크립트를 실행/사용할 수 있게 해주는 실행 환경(런타임)이다. Node.js의 등장으로 자바스크립트 언어 하나만으로 웹 풀스택을 개발할 수 있게 되었다.**
 - Express(Node.js)
@@ -40,19 +40,85 @@ JavaScript는 위키피디아의 정의에 따르면 HTML, CSS와 함께 월드 
 - let: 재할당이 가능한 변수 선언
 - var
 2. 데이터 타입
-- 원시 타입
-- 참조 타입
+- 기본형(메모리에 값을 저장): Number, String, Boolean, undefined, null, Symbol, BigInt
+- 참조형(메모리에 값이 저장된 주소를 저장): Object, Array, Function
 3. 함수
 - 일반 함수 선언
 - 화살표 함수 선언
 
 4. 최신 주요 문법(ES6+ 핵심 특성)
 - Template Literals(템플릿 리터럴): 문자열 내부에서 백틱(`)을 사용하면 계산식이나 함수 호출, 변수를 자유롭게 삽입할 수 있다.
-- Destructuring(구조 분해 할당)
+- Destructuring(구조 분해 할당): 배열이나 객체의 속성을 해체하여, 그 값을 각각의 독립된 변수에 직접 할당할 수 있게 해주는 자바스크립트 표현식이다.
 - Spread Operator(스프레드 연산자): 점 3개를 사용해 배열이나 객체를 복사하거나 합친다.
 
-5. **DOM: HTML 문서의 모든 요소를 자바스크립트가 이해하고 조작할 수 있는 객체의 트리 구조로 나타낸 것이다.**
-- **Document Querying(요소 탐색): 화면에 그려진 HTML 요소를 자바스크립트 변수로 가져온다.**
+5. **DOM: HTML 문서의 모든 요소를 자바스크립트가 이해하고 조작할 수 있는 객체의 트리 구조로 나타낸 것이다.** DOM 요소는 참조형(객체) 데이터로 상수가 가리키는 메모리 주소는 그대로 두고, 객체 내 속성을 바꾸는 것은 자유롭게 허용되기 때문에 const여도 내부 값을 바꿀 수 있다.
+- Document Querying(요소 탐색): 화면에 그려진 HTML 요소를 자바스크립트 변수로 가져온다.
+```js
+// ID가 'submit-btn'인 요소를 탐색하여 submitBtn 상수에 할당
+const submitBtn = document.querySelector('#submit-btn');
+
+// 클래스가 'item'인 모든 요소를 탐색하여 items 상수에 배열(NodeList)로 할당
+const items = document.querySelectorAll('.item');
+```
 - 내용 및 속성 변경: 선택한 요소의 글자, HTML 구조, CSS 스타일, 속성을 수정한다.
+```js
+// ID가 'main-title'인 요소를 탐색하여 title 상수에 할당
+const title = document.querySelector('#main-title');
+
+// 1. 글자 내용 변경 (텍스트만 안전하게 변경)
+title.textContent = '반갑습니다!';
+
+// 2. HTML 구조 변경 (태그를 해석하여 화면에 반영)
+title.innerHTML = '<span>강조된 제목</span>';
+
+// 3. CSS 스타일 변경 (상수에 할당되었지만 객체 내부 속성은 변경 가능)
+title.style.color = 'blue';
+title.style.fontSize = '24px';
+
+
+// 클래스가 'profile'인 요소를 탐속하여 profileImg 상수에 할당
+const profileImg = document.querySelector('.profile');
+
+// 4. 속성 변경 (이미지 태그의 src 속성을 새 주소로 변경)
+profileImg.setAttribute('src', 'new-image.png');
+```
 - 요소 생성 및 삭제: 새로운 HTML 요소를 동적으로 만들어서 화면에 붙이거나 삭제한다.
+```js
+// 새로운 <li> 태그 요소를 생성하여 newTodo 상수에 할당
+// (아직 화면에 나타나지 않고 메모리 상에만 존재함)
+const newTodo = document.createElement('li');
+
+// 생성한 <li> 요소의 내부 글자 속성을 변경 (const이지만 내부 속성이므로 변경 가능)
+newTodo.textContent = '자바스크립트 공부하기';
+
+// 새 요소가 들어갈 부모 태그(<ul>)를 탐색하여 todoList 상수에 할당
+const todoList = document.querySelector('#todo-list');
+
+// 부모 태그인 todoList의 마지막 자식으로 newTodo 요소를 화면에 붙임
+todoList.appendChild(newTodo);
+
+
+// 화면에서 지우고 싶은 요소를 탐색하여 oldItem 상수에 할당
+const oldItem = document.querySelector('.old-item');
+
+// oldItem 상수가 가리키는 주소의 HTML 요소를 화면과 DOM 트리에서 완전히 제거
+oldItem.remove();
+```
 - **Event Handling(이벤트 리스너): 사용자의 클릭, 키보드 입력, 마우스 이동 등의 행동을 감지한다.**
+```js
+<button id="myButton">버튼</button>
+
+const btn = document.getElementById('myButton');
+
+// 버튼을 클릭하면 콘솔에 "안녕하세요!"가 출력
+// 일반 함수 사용
+btn.addEventListener('click', function() {
+  console.log('안녕하세요!');
+});
+
+// 버튼을 클릭하면 콘솔에 "안녕하세요!"가 출력
+// 화살표 함수 사용
+btn.addEventListener('click', () => {
+  console.log('안녕하세요!');
+});
+```
