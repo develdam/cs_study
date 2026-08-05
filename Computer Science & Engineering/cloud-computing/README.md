@@ -4,6 +4,8 @@
 
 빌려주는 컴퓨팅 자원의 유형에 따라 IaaS(인프라), PaaS(플랫폼), SaaS(소프트웨어) 서비스로 나뉜다. 최근에는 개발자가 서버 관리 없이 코드 실행 단위로만 자원을 빌려 쓰는 서버리스(Serverless)가 새로운 유형으로 함께 분류된다.
 
+---
+
 클라우드 컴퓨팅 기업 목록
 1. Amazon Web Services(AWS)
 2. Microsoft Azure

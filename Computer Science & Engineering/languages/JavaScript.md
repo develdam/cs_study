@@ -21,10 +21,10 @@ JavaScript는 위키피디아의 정의에 따르면 HTML, CSS와 함께 월드 
 - Nuxt.js(Vue.js + Node.js)
 4. 모바일 앱 개발
 - React Native(React): 하나의 React 소스 코드로 iOS와 Android 앱을 동시에 개발하는 기술로 실제 네이티브 UI 컴포넌트로 변환되어 빠른 속도를 낸다.
-- Ionic
+- Ionic: HTML, CSS, JavaScript를 이용해 하나의 코드로 안드로이드, 아이폰, 웹 앱을 모두 만들 수 있는 크로스 플랫폼 UI 툴 킷
 5. 데스크톱 앱 개발
-- Electron(Node.js)
-- Tauri(Rust)
+- Electron(Node.js): HTML, CSS, JavaScript 등 웹 기술로 윈도우, 맥OS, 리눅스용 데스크톱 앱을 만들 수 있는 오픈소스 프레임워크로 하나의 코드로 여러 운영체제를 지원한다.
+- Tauri(Rust): Electron의 최대 단점인 무거운 용량과 메모리 소모를 해결하기 위해 등장한 프레임워크로 백엔드에서는 Rust 언어를 사용한다.
 6. 3D 웹 그래픽 및 게임 개발
 - Three.js: 웹브라우저에서 3D 그래픽을 쉽게 구현할 수 있도록 도와주는 자바스크립트 라이브러리이다.
 - Phaser: 웹브라우저에서 실행되는 2D 게임을 개발할 수 있도록 도와주는 오픈소스 자바스크립트 게임 프레임워크이다.
